@@ -1,0 +1,151 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block home_active %}active{% endblock %}
+{% block body %}
+
+<!-- section 1 -->
+<div id="header" class="Header1">
+    <div class="heroContainer">
+        <div id="heroCol" class="Column">
+            <div class="Content">
+                <div class="Heading1">Revolutionize healthcare shopping with EPharmacy</div>
+                <div class="Text">Experience a user-friendly interface, secure authentication, and an extensive
+                    product catalog for hassle-free medical shopping.</div>
+            </div>
+        </div>
+        <div class="image">
+            <img class="Image" src="{{url_for('static', filename='images/home/Medicine-bro.png')}}" loading="lazy"/>
+        </div>
+
+    </div>
+</div>
+
+<!-- section 2 -->
+<div id="loadout" class="Header1">
+    <div class="heroContainer">
+        <div class="Column">
+            <div class="Content">
+                <div class="SectionTitle">
+                    <div class="Subheading">Convenience</div>
+                    <div class="Content">
+                        <div class="Heading2">
+                            Real-Time Assistance for Hassle-Free Healthcare Shopping
+                        </div>
+                        <div class="Text">
+                            Experience seamless and reliable healthcare shopping with our real-time assistance
+                            feature. Our dedicated chat support and customer service availability ensure that
+                            you get the help you need, whenever you need it
+                        </div>
+                    </div>
+                </div>
+                <div class="List">
+                    <div class="ListItem">
+                        <span class="material-symbols-outlined">
+                            chat
+                        </span>
+                        <div class="Subheadings">Chat Support</div>
+                        <div class="Text">
+                            Get instant help and answers to your questions through our convenient chat support.
+                        </div>
+                    </div>
+                    <div class="ListItem">
+                        <span class="material-symbols-outlined">
+                            support_agent
+                        </span>
+                        <div class="Subheadings">
+                            Customer Service
+                        </div>
+                        <div class="Text">
+                            Our dedicated customer service team is available to assist you with any concerns.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image">
+            <img class="Image" src="{{url_for('static', filename='images/home/Mental health-bro.png')}}" loading="lazy"/>
+        </div>
+    </div>
+</div>
+
+<!-- section 3 -->
+<div id="layout" class="Header1">
+    <div id="Layout240" class="heroContainer">
+        <div class="heading-container">
+            <div class="Heading3">Explore our Easy Payment Options for a hassle-free checkout experience</div>
+        </div>
+        <div class="L3Row1">
+            <div class="L3Column1">
+                <img class="PlaceholderImage" style="align-self: stretch; height: 240px; opacity: 0"
+                    src="https://via.placeholder.com/405x240" loading="lazy"/>
+                <div class="L3Content1">
+                    <div class="L3Content2">
+                        <div class="L3Heading2">Track your Order in real-time and stay updated on its progress</div>
+                        <div class="L3Text1">Our secure authentication ensures your personal information is protected
+                        </div>
+                    </div>
+                    <div class="Action">
+                        <div class="L3Button1">
+                            <div class="L3Button2">Learn More </div>
+                            <div class="L3IconChevronRight1">
+                                <div class="L3Vector1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="L3Column2">
+                <img class="PlaceholderImage" style="align-self: stretch; height: 240px; opacity: 0"
+                    src="https://via.placeholder.com/405x240" loading="lazy"/>
+                <div class="L3Content3">
+                    <div class="L3Content4">
+                        <div class="L3Heading3">Experience the convenience of Order Tracking for all your purchases
+                        </div>
+                        <div class="L3Text2">With just a few clicks you can easily track the status of your orders</div>
+                    </div>
+
+                    <div class="L3Action1">
+                        <div class="L3Button3">
+                            <div class="L3Button4">Learn More </div>
+                            <div class="L3IconChevronRight2">
+                                <div class="L3Vector2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="L3Column3">
+                <img class="PlaceholderImage" style="align-self: stretch; height: 240px"
+                    src="https://via.placeholder.com/405x240" loading="lazy"/>
+                <div class="L3Content5">
+                    <div class="L3Content6">
+                        <div class="L3Heading4">Enjoy a Secure Shopping Experience with our reliable authentication
+                            system</div>
+                        <div class="L3Text3">Rest assured that your personal information is safe and
+                            <br />secure
+                        </div>
+                    </div>
+
+                    <div class="L3Action2">
+                        <div class="L3Button5">
+                            <div class="L3Button6">Learn More </div>
+                            <div class="L3IconChevronRight3">
+                                <div class="L3Vector3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- section 4 -->
+
+<!-- <div id="hero" class="section">hello</div>
+        <div id="hero1" class="section"></div>
+        <div id="hero2" class="section">hello</div> -->
+{% endblock %}

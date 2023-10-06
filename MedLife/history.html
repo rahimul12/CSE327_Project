@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block title %}History{% endblock %}
+{% block history_active %}active{% endblock %}
+{% block body %}
+
+{% if "google_id" in session: %}
+
+<div class="Products">
+    <div class="Product">
+
+        <div class="Column3">
+            <a href="{{ url_for('clear_history') }}" class="Button" id="remove-btn">
+                <span class="material-symbols-outlined">
+                    delete_forever
+                </span>
+                Clear history</a>
+        </div>
+        
+        <br><br/>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Manufacturer</th>
+                    <th>Brand Name</th>
+                    <th>Generic Name</th>
+                    <th>Strength</th>
+                    <th>Description</th>
+                    <th>Price(Tk)</th>
+                    <th>Quantity</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in history_items %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ item.product.Manufacturer }}</td>
+                    <td>{{ item.product.BrandName }}</td>
+                    <td>{{ item.product.GenericName }}</td>
+                    <td>{{ item.product.Strength }}</td>
+                    <td>{{ item.product.Description }}</td>
+                    <td>{{ item.product.Price }}</td>
+                    <td>{{ item.Quantity }}</td>
+                    <td>{{ item.Timestamp.strftime("%I:%M %p") }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <h3>Total price: {{ total_price }} Tk</h3>
+        <br><br />
+
+        {% else: %}
+        <h1>Login</h1>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
