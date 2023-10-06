@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block title %}Product details{% endblock %}
+{% block shop_active %}active{% endblock %}
+{% block body %}
+<div class="Products">
+    <div class="Product">
+        <br>
+        <h1>{{ product.GenericName }}</h1>
+        <h2>Brand Name: {{ product.BrandName }}</h2>
+        <br>
+        <p>Manufacturer: {{ product.Manufacturer }}</p>
+        <p>Strength: {{ product.Strength }}</p>
+        <p>Description: {{ product.Description }}</p>
+        <br>
+        <h3>Price: {{ product.Price }} Tk</h3>
+        <br>
+        <form action="{{ url_for('add_to_cart', product_id=product.productID, redirect_url=request.url) }}"
+            method="post">
+            <p>Quantity: </p>
+            <input type="number" name="quantity" value="1" min="1">
+            <input type="submit" value="Add to Cart">
+        </form>
+        <br>
+    </div>
+</div>
+
+{% endblock %}
