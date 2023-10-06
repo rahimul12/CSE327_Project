@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block title %}Cart{% endblock %}
+{% block cart_active %}active{% endblock %}
+{% block body %}
+
+{% if "google_id" in session: %}
+
+<div class="Products">
+    <div class="Product">
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Manufacturer</th>
+                    <th>Brand Name</th>
+                    <th>Generic Name</th>
+                    <th>Strength</th>
+                    <th>Description</th>
+                    <th>Price(Tk)</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart_items %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ item.product.Manufacturer }}</td>
+                    <td>{{ item.product.BrandName }}</td>
+                    <td>{{ item.product.GenericName }}</td>
+                    <td>{{ item.product.Strength }}</td>
+                    <td>{{ item.product.Description }}</td>
+                    <td>{{ item.product.Price }}</td>
+                    <td>{{ item.Quantity }}</td>
+                    <!-- <td><a href="{{ url_for('remove_from_cart', cart_id=item.CartID) }}">Remove</a></td> -->
+                    <td>
+                    <div class="Column3">
+                        <a href="{{ url_for('remove_from_cart', cart_id=item.CartID) }}" class="Button" id="remove-btn">
+                            <span class="material-symbols-outlined">
+                                remove_shopping_cart
+                            </span>
+                            </a>
+                    </div>
+                </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <h3>Total price: {{ total_price }} Tk</h3>
+        <br />
+        <div class="Column3">
+            <a href="{{ url_for('buy_all') }}" class="Button">
+                <span class="material-symbols-outlined">
+                    payments
+                </span>
+                Buy all</a>
+        </div>
+        <br><br />
+
+        {% else: %}
+        <h1>Login</h1>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
