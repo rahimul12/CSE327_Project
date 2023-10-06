@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block title %}Shop{% endblock %}
+{% block shop_active %}active{% endblock %}
+{% block body %}
+<div class="Products">
+    <div class="Product">
+
+        <div class="Search">
+            <form id="search" action="{{ url_for('search_products') }}" method="post">
+                <input type="text" name="search_query" placeholder="Search...">
+                <button type="submit" value="Search">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </button>
+            </form>
+        </div>
+        <br><br/>
+
+        <table >
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Manufacturer</th>
+                    <th>Brand Name</th>
+                    <th>Generic Name</th>
+                    <th>Strength</th>
+                    <th>Description</th>
+                    <th>Price(Tk)</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{ product.productID }}</td>
+                    <td>{{ product.Manufacturer }}</td>
+                    <td>{{ product.BrandName }}</td>
+                    <td><a href="{{ url_for('view_product', product_id=product.productID) }}">
+                        {{ product.GenericName}}</a>
+                    </td>
+                    <td>{{ product.Strength }}</td>
+                    <td>{{ product.Description }}</td>
+                    <td>{{ product.Price }}</td>
+                    <td>
+                        <form
+                            action="{{ url_for('add_to_cart', product_id=product.productID, redirect_url=request.url) }}"
+                            method="post">
+                            <input type="number" name="quantity" value="1" min="1">
+                            <button type="submit" value="Add to Cart"><span class="material-symbols-outlined">
+                                add_shopping_cart
+                                </span></button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
