@@ -1,0 +1,932 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    color: var(--black-color);
+}
+
+:root {
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+    --light-grey-color: #F4F4F4;
+    --light-green-color: #92E3A9;
+    --pale-green-color: #def7e5;
+    --light-red-color: #FF725E;
+    --pale-red-color: #ffd5cf;
+    --light-blue-color: #79a3ff;
+    --pale-blue-color: #b3caff;
+}
+
+html {
+    scroll-padding-top: 72px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    /* new change */
+    height:100%;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    /* new change */
+    /* position:relative; */
+    box-sizing: inherit;
+    min-height: 100%;
+    /* margin-bottom: 9.74rem;
+    padding-bottom: 9.74rem; */
+}
+#main{
+    margin-top: 72px;
+
+}
+table,td, th {
+    border: 0.50px var(--black-color) solid;
+    border-collapse: collapse;
+    padding: 10px;
+}
+/* NAV */
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 72px;
+    padding: 0 64px;
+    background: var(--white-color);
+    border-bottom: 0.50px var(--black-color) solid;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    z-index: 1000;
+}
+
+.navContainer {
+    width: 1440px;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    display: inline-flex;
+    text-align: center;
+}
+
+.Column1 {
+    flex: 1 1 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+}
+
+.Logo {
+    position: relative;
+}
+
+.Logo h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+}
+
+.Column2 {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+    display: flex;
+}
+
+.Column2 a.nav-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.Column2 a:hover,
+.active {
+    text-decoration: underline;
+}
+
+#span-icon {
+    display: none;
+}
+
+#span-text {
+    display: block;
+}
+
+.Column2 .nav-link {
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.Column2 li ul.dropdown li {
+    display: block;
+}
+
+.Column2 li ul.dropdown {
+    display: none;
+    position: absolute;
+    background: var(--white-color);
+    padding: 15px;
+    border: 0.50px var(--black-color) solid;
+    line-height: 32px;
+    text-align: left;
+}
+
+.Column2 li:hover ul.dropdown {
+    display: block;
+}
+
+.Column3 {
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    display: inline-flex;
+}
+
+.Column3 .Button {
+    padding: 8px 20px;
+    background: var(--light-green-color);
+    border: 0.50px var(--black-color) solid;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    cursor: pointer;
+    border-radius: 0.9375rem;
+}
+#logout-btn{
+    background: var(--light-blue-color);
+}
+#logout-btn:hover {
+    background: var(--pale-blue-color);
+}
+
+#remove-btn {
+    background: var(--light-red-color);
+}
+#remove-btn:hover {
+    background: var(--pale-red-color);
+}
+
+.Column3 .Button:hover {
+    background-color: var(--pale-green-color);
+}
+
+#hero {
+    margin-top: 72px;
+    height: 100vh;
+    background-color: var(--pale-green-color);
+}
+
+#hero1 {
+    height: 100vh;
+    background-color: var(--light-grey-color);
+}
+
+#hero2 {
+    height: 100vh;
+    background-color: var(--light-green-color);
+}
+
+/* SECTION 1 */
+
+.Header1 {
+    width: 100%;
+    padding: 0 64px;
+    /* margin-top: 72px; */
+    background: var(--white-color);
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    display: inline-flex;
+}
+
+.heroContainer {
+    width: 1440px;
+    align-self: stretch;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 80px;
+    display: inline-flex;
+}
+
+.heroContainer .Column {
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    display: inline-flex;
+}
+
+#heroCol {
+    padding-top: 25px;
+}
+
+.Content {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    display: flex;
+}
+
+.Heading1 {
+    align-self: stretch;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 57.60px;
+    word-wrap: break-word;
+}
+
+.Text {
+    align-self: stretch;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    word-wrap: break-word;
+}
+
+.image {
+    flex: 1;
+}
+
+.Image {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* SECTION 2 */
+.Heading2 {
+    align-self: stretch;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.60px;
+    word-wrap: break-word;
+}
+
+.SectionTitle {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    display: flex;
+}
+
+.Subheading {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.List {
+    align-self: stretch;
+    padding: 8px 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    display: inline-flex;
+}
+
+.ListItem {
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    display: inline-flex;
+}
+
+.Subheadings {
+    align-self: stretch;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    word-wrap: break-word;
+}
+
+.Subheadings .Text {
+    align-self: stretch;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+/* SECTION 3 */
+
+#Layout240 {
+    padding: 112px 0;
+    flex-direction: column;
+}
+
+.heading-container{
+    /* width: 768px; */
+    margin: 0 336px;
+    display: flex;
+    /* align-self: stretch; */
+}
+
+.Heading3 {
+    /* width: 768px; */
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    word-wrap: break-word;
+}
+
+.L3Row1 {
+    align-self: stretch;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+    display: inline-flex;
+}
+
+.L3Column1 {
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+    display: inline-flex;
+}
+
+
+/* .PlaceHolderImage {
+    align-self: stretch;
+    height: 240px;
+    opacity: 0" 
+    
+} */
+
+.L3Content1 {
+    align-self: stretch;
+    height: 188px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    display: flex;
+}
+
+.L3Content2 {
+    align-self: stretch;
+    height: 132px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    display: flex;
+}
+
+.L3Heading2 {
+    align-self: stretch;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-family: Roboto;
+    font-weight: 700;
+    line-height: 33.60px;
+    word-wrap: break-word;
+}
+
+.L3Text1 {
+    align-self: stretch;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.Action {
+    align-self: stretch;
+    height: 32px;
+    padding-top: 8px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+}
+
+.L3Button1 {
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+}
+
+.L3Button2 {
+    color: black;
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.L3IconChevronRight1 {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.L3Vector1 {
+    width: 12.59px;
+    height: 7.13px;
+    left: 8px;
+    top: 17.84px;
+    position: absolute;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    background: black
+}
+
+.L3Column2 {
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+    display: inline-flex;
+}
+
+.L3Content3 {
+    align-self: stretch;
+    height: 188px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    display: flex;
+}
+
+.L3Content4 {
+    align-self: stretch;
+    height: 132px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    display: flex;
+}
+
+.L3Heading3 {
+    align-self: stretch;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33.60px;
+    word-wrap: break-word;
+}
+
+.L3Text2 {
+    align-self: stretch;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.L3Action1 {
+    align-self: stretch;
+    height: 32px;
+    padding-top: 8px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+}
+
+.L3Button3 {
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+}
+
+.L3Button4 {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.L3IconChevronRight2 {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.L3Vector2 {
+    width: 12.59px;
+    height: 7.13px;
+    left: 8px;
+    top: 17.84px;
+    position: absolute;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    background: black;
+}
+
+.L3Column3 {
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+    display: inline-flex;
+}
+
+.L3Content5 {
+    align-self: stretch;
+    height: 222px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    display: flex;
+}
+
+.L3Content6 {
+    align-self: stretch;
+    height: 166px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    display: flex;
+}
+
+.L3Heading4 {
+    align-self: stretch;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-family: Roboto;
+    font-weight: 700;
+    line-height: 33.60px;
+    word-wrap: break-word;
+}
+
+.L3Text3 {
+    align-self: stretch;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.L3Action2 {
+    align-self: stretch;
+    height: 32px;
+    padding-top: 8px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+}
+
+.L3Button5 {
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+}
+
+.L3Button6 {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.L3IconChevronRight3 {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.L3Vector3 {
+    width: 12.59px;
+    height: 7.13px;
+    left: 8px;
+    top: 17.84px;
+    position: absolute;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    background: black;
+}
+
+/* SECTION 4 */
+
+
+
+
+
+
+
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    padding: 80px 64px;
+    background: var(--light-grey-color);
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+
+    /* new change */
+    bottom: 0;
+    /* position: absolute; */
+    position:relative;
+}
+
+.Footer4 {
+    width: 1440px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; 
+    gap: 80px;
+    display: inline-flex;
+}
+
+.Footer4 .Content {
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.up-footer-link {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.SocialLinks {
+    flex: 1 1 0;
+    height: 24px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    display: flex;
+}
+
+.SocialLinks i {
+    font-size: 28px;
+}
+
+.Credits {
+    align-self: stretch;
+    /* height: 54px; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+    display: flex;
+}
+
+.Divider {
+    align-self: stretch;
+    height: 1px;
+    background: var(--black-color);
+    border: 1px solid var(--black-color);
+}
+
+.Row {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    display: inline-flex;
+}
+
+.Row .Text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+}
+
+.FooterLinks {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    display: flex;
+    flex-direction: row;
+}
+
+.down-footer-link {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+    line-height: 21px;
+    word-wrap: break-word;
+}
+
+/* SHOP */
+
+.Shop{
+    width:100%;
+    Height:100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:72px;
+    font-weight: 900;
+    color:#000000;
+    padding: 50vh 10vw;
+}
+.Products{
+    position:relative;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+}
+
+.Product{
+    padding: 32px 64px;
+}
+
+.Search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#search{
+    width: 600px;
+    height:44px;
+    display: flex;
+}
+#search button{
+    flex: 0.2;
+}
+#search input{
+    flex: 1;
+    font-size: 18px;
+}
+form{
+    height:42px;
+    display: flex;
+    border: 0.50px var(--black-color) solid;
+    border-radius: 0.9375rem; 
+}
+form input{
+    width: 50px;
+    outline: none;
+    border:none;
+    border-radius: 0.9375rem 0 0 0.9375rem;
+    padding-left: 20px;
+}
+form button{
+    width: 50px;
+    outline: none;
+    border:none;
+    background: var(--light-green-color);
+    border-radius:0 0.9375rem 0.9375rem 0;
+    cursor: pointer;
+}
+
+form button:hover{
+    background: var(--pale-green-color);
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 950px) {
+
+    #main{
+        margin-bottom: 72px;
+    }
+
+    /* NAV */
+
+    nav {
+        position: fixed;
+        height: 72px;
+        padding: 0px 32px;
+        border-top: 0.50px var(--black-color) solid;
+    }
+
+    .Logo h4 {
+        font-size: 20px;
+    }
+
+    .navContainer .Column2 {
+        width: 100%;
+        background: var(--white-color);
+        position: fixed;
+        height: 72px;
+        bottom: 0;
+        left: 0;
+        border-top: 0.50px var(--black-color) solid;
+        padding: 32px;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+        flex-direction: row-reverse;
+    }
+
+    .Column2 .nav-link {
+        justify-content: end;
+    }
+
+    .Column2 li ul.dropdown {
+        bottom: 71px;
+        left: 32px;
+        text-align: right;
+    }
+
+    #span-icon {
+        display: block;
+    }
+
+    #span-text {
+        display: none;
+    }
+
+    /* HERO */
+
+    .Header1 {
+        padding: 0 32px;
+    }
+
+    .heroContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .heroContainer .Column .Content .Heading {
+        font-size: 48px;
+    }
+
+    /* LOADOUT */
+
+    .List {
+        flex-direction: column;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        padding: 40px 32px;
+    }
+    .Footer4 {
+        gap: 40px;
+    }
+
+    .Footer4 .Content {
+        flex-direction: column;
+        gap: 52px;
+    }
+    .Row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer .Column2{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .footer .Column2 a{
+        padding: 0 11px;
+    }
+}
